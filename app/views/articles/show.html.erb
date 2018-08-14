@@ -1,0 +1,16 @@
+<article>
+  <h1><%= @article.title %>
+    <small>
+      <%= link_to "", edit_article_path, class: 'glyphicon glyphicon-pencil' %>
+    </small>
+    <small>
+      <%= link_to "", article_path,
+            class: 'glyphicon glyphicon-trash',
+            method: :delete,
+            data: { confirm: 'Are you sure?'} %>
+    </small>
+  </h1>
+  <hr>
+  <%= @article.content %>
+</article>
+
